@@ -31,6 +31,7 @@ function Time({ handleTimeLimitation = () => {} }) {
         render={(props) => (
           <>
             <div>
+              Hour:
               <Field
                 name="hour"
                 component="input"
@@ -43,6 +44,7 @@ function Time({ handleTimeLimitation = () => {} }) {
                   debouncedHandleTimeLimitation(value, name, props)
                 }
               />
+              Minute:
               <Field
                 name="minute"
                 component="input"
