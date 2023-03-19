@@ -6,8 +6,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   const nowOrGreaterTime = (val, name, formProps) => {
-    let currentHour = new Date().toLocaleTimeString().split(":")[0];
-    let currentMinute = new Date().toLocaleTimeString().split(":")[1];
+    let currentHour = new Date().getHours();
+    let currentMinute = new Date().getMinutes();
     if (val == "") return;
     if (name === "hour") {
       if (currentHour < val) return;
@@ -26,8 +26,8 @@ function App() {
     }
   };
   const nowOrLessTime = (val, name, formProps) => {
-    let currentHour = new Date().toLocaleTimeString().split(":")[0];
-    let currentMinute = new Date().toLocaleTimeString().split(":")[1];
+    let currentHour = new Date().getHours();
+    let currentMinute = new Date().getMinutes();
     if (val == "") return;
     if (name === "hour") {
       if (currentHour > val) return;
